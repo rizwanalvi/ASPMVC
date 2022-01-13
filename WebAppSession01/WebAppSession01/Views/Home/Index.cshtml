@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.PageName</h2>
+<h3 class="display-1">PAkistan zindbad</h3>
+<p class="lead">
+    Muhammad Ali Jinnah was a barrister, politician and the founder of Pakistan. Jinnah served as the leader of the All-India Muslim League from 1913 until the inception of Pakistan on 14 August 1947, and then as the Dominion of Pakistan's first governor-general until his death
+<button class="btn btn-warning">Click Me</button>
+</p>
+<ul>
+    <li>@ViewBag.ProductData.ProductID</li>
+    <li>@ViewBag.ProductData.ProductName</li>
+</ul>
+
+<table class="table">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+    </tr>
+    @foreach (var item in @ViewBag.Products)
+    {
+    <tr>
+        <td>@item.ProductID</td>
+        <td>@item.ProductName</td>
+    </tr>
+    }
+
+
+</table>
